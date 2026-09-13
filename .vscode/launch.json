@@ -1,0 +1,28 @@
+{
+  // Ces configurations passent automatiquement env.json (non versionné,
+  // voir env.example.json) au lancement — plus besoin de taper la commande
+  // à la main depuis le bouton ▶️ de VSCode.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "PronoFoot (Chrome)",
+      "request": "launch",
+      "type": "dart",
+      "deviceId": "chrome",
+      "args": ["--dart-define-from-file=env.json"]
+    },
+    {
+      "name": "PronoFoot (iOS / simulateur)",
+      "request": "launch",
+      "type": "dart",
+      "args": ["--dart-define-from-file=env.json"]
+    },
+    {
+      "name": "PronoFoot (profile)",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile",
+      "args": ["--dart-define-from-file=env.json"]
+    }
+  ]
+}

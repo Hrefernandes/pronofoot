@@ -1,0 +1,49 @@
+name: pronofoot
+description: "Pronostics de football entre amis — certification CDA 2026."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  # Accès aux données : Supabase (auth + PostgREST + RLS).
+  supabase_flutter: ^2.8.0
+
+  # Gestion d'état et injection de dépendances (repositories mockables).
+  flutter_riverpod: ^2.6.1
+
+  # Formatage des dates et regroupement par jour (écran E2).
+  intl: ^0.19.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/fonts/OFL.txt
+
+  fonts:
+    # Display — titres et wordmark, toujours en capitales.
+    - family: Archivo
+      fonts:
+        - asset: assets/fonts/Archivo.ttf
+    # Corps — texte courant.
+    - family: Instrument Sans
+      fonts:
+        - asset: assets/fonts/InstrumentSans.ttf
+    # Données — scores, codes, heures, eyebrows (chasse fixe).
+    - family: Azeret Mono
+      fonts:
+        - asset: assets/fonts/AzeretMono.ttf
